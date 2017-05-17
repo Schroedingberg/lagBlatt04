@@ -1,4 +1,5 @@
-#+LATEX_HEADER: \usepackage{amsthm}
+#+LATEX_HEADER: \usepackage{amsthm} \usepackage{pgf} \usepackage{tikz}
+
 #+LATEX_HEADER: \newtheorem{lemma}{Lemma}
 * Aufgabe 1
 Sei \(G\) eine Gruppe und \(g \in G\). Sei \(e\) das neutrale Element
@@ -20,7 +21,6 @@ Geht so nur wenn G abelsch. Alternative:
   g^{m+1}g^{n+1}=g^mgg^ng=g^mg^{n+1}g=g^mg^ng^2=g^{m+n}g^2=g^{m+n+2}=g^{m+1+n+1}
 \end{align*}
      #+END_SRC
-
 
 * Aufgabe 2
   Sei \(G\) eine Gruppe mit neutralem Element \(e\)
@@ -100,3 +100,24 @@ Geht so nur wenn G abelsch. Alternative:
     (Sieht komisch aus)
    
 * Aufgabe 4
+  \( U = {(x,y) \in \mathbb{R}} | 3x+7y = 0\) Unterraum von \(\mathbb{R}^2\).
+** a) 
+
+#+BEGIN_SRC latex
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw[->,color=black] (-4.3,0.) -- (16.84,0.);
+\foreach \x in {-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.,7.,8.,9.,10.,11.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-6.74) -- (0.,6.3);
+\foreach \y in {-5.,-4.,-3.,-2.,-1.,1.,2.,3.,4.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-4.3,-6.74) rectangle (16.84,6.3);
+\draw [domain=-4.3:16.84] plot(\x,{(-0.-3.*\x)/7.});
+\begin{scriptsize}
+\draw[color=black] (-4.14,1.62) node {$U$};
+\end{scriptsize}
+\end{tikzpicture}
+#+END_SRC
+** b)
+
