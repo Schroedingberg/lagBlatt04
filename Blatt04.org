@@ -1,0 +1,102 @@
+#+LATEX_HEADER: \usepackage{amsthm}
+#+LATEX_HEADER: \newtheorem{lemma}{Lemma}
+* Aufgabe 1
+Sei \(G\) eine Gruppe und \(g \in G\). Sei \(e\) das neutrale Element
+von \(G\).
+zz.: \(\forall m,n \in \mathbb{Z}: g^mg^n = g^{m+n}    \)
+
+
+Beweis:
+ - IA :: \(g^0 = e, g^1 = g \Rightarrow g^{0}g^{1} = g^{0+1} =g^1\)
+ - IV :: \(g^{m}g^{n}=g^{m+n}\) gelte für feste \(m,n \in \mathbb{Z}\)
+ - IS :: zz.:\(g^{m+1}g^{n+1}=g^{m+1+n+1}    \)
+   - Beweis:
+     #+BEGIN_SRC latex
+\begin{align*}
+  g^{m+1}g^{n+1} = g^m g^n gg= g^{m+n}gg = g^{m+n+2} = g^{m+1+n+1} 
+\end{align*}
+Geht so nur wenn G abelsch. Alternative:
+\begin{align*}
+  g^{m+1}g^{n+1}=g^mgg^ng=g^mg^{n+1}g=g^mg^ng^2=g^{m+n}g^2=g^{m+n+2}=g^{m+1+n+1}
+\end{align*}
+     #+END_SRC
+
+
+* Aufgabe 2
+  Sei \(G\) eine Gruppe mit neutralem Element \(e\)
+** a) zz: \(g,h \in G: g\sim h \Leftrightarrow g = h \lor g = h^{-1}  \)  , \(\sim\) Äquivalenzrelation
+   Beweis:
+   - ~ reflexiv :: \(g \sim g \Leftrightarrow  g = g \lor g = g^{-1}\)
+		   Immer wahr, da \(g=g \forall g \in G\ \Rightarrow
+                   \sim ) reflexiv
+   - ~ symmetrisch :: zz.: \(g \sim h \Leftrightarrow h\sim g \)
+		      Beweis:
+		      
+		      \(g \sim h \Leftrightarrow g = h \lor g = h^{-1} \Leftrightarrow h = g \lor h = g^{-1} \Leftrightarrow h\sim g\)
+   - ~ transitiv :: zz.: \(g,h,b \in G: g\sim h \land h\sim b \Rightarrow g\sim b\)
+		    Beweis:
+
+		    \(g\sim h \Leftrightarrow h\sim b\)\\
+		    \(\Leftrightarrow (g=h\lor g = h^{-1})\land (h=b\lor h = b^{-1})\)\\
+		    \(\Leftrightarrow (g = h \land h = b)\lor (g = h \land h = b^{-1})\lor (g=h^{-1} \land h=b)\lor (g=h^{-1}\land h = b^{-1})\)\\
+		    \(\Leftrightarrow (g=b)\lor (g=b^{-1})\lor (b=g^{-1}) \lor (g^{-1} = b^{-1})\)\\
+		    \(\Leftrightarrow g=b \lor g= b^{-1}\)\\
+		    \(\Leftrightarrow g\sim b\) \\
+		    
+	\qedhere
+** TODO b) zz.: \(\left|G  \right| = 2n, n \in \mathbb{N} \Rightarrow \exists g\in G-\{e\} \text{ mit } g^2 = e\)
+** c) zz.: \(g^2 = e \forall g \in G \Rightarrow G\) abelsch
+   Beweis: Sei \(b\) ein beliebiges Element aus \(G\) mit \(b \neq g\).\\
+   \(g^2 = e = ee = ggbb = (gb)^2 = (bg)^2 = bbgg\)
+   und wenn \((bg)^2 = (gb)^2\), dann auch \(bgbg = bbgg\).
+   Also gilt Kommutativgesetz.
+* Aufgabe 3
+** a) zz: \((K,+,\cdot)\) ist ein Körper.
+   #+BEGIN_lemma 
+   \((K,+) \) ist eine Abelsche Gruppe.
+   #+END_lemma
+   #+BEGIN_proof
+   Da nach Vorlesung \((\mathbb{Q}, +)\) eine Abelsche Gruppe ist und
+   die Elemente der Paare aus \(K\) einfach nur elementweise addiert werden, muss \(K\) auch eine Abelsche Gruppe sein.
+   #+END_proof
+   #+BEGIN_lemma
+   \((K,\cdot)\) ist eine Abelsche Gruppe.
+   #+END_lemma
+*** TODO Assoziativgesetz
+*** Existenz des neutralen Elements \(e = (e_1,e_2)\)
+    
+    #+BEGIN_SRC latex
+    \begin{align*}
+	&(a,b)(e_1,e_2) = (a,b)\\
+      \Leftrightarrow & (ae_1-be_2, ae_2+be_1) =(a,b)\\
+      \Leftrightarrow & ae_1-be_2 = a \land ae_2+be_1 = b\\
+      \Leftrightarrow & ae_1-be_2 -a = 0 \land ae_2+be_1 = b\\
+      \Leftrightarrow & e_2 = \frac{e_1-1}{b}\cdot a\land ae_2+be_1 = b\\
+      \Rightarrow & a(\frac{e_1-1}{b}\cdot a)+be_1=b\\
+      \Leftrightarrow & b^2(e_1-1)=a^2(e_1-1)\\
+      \Leftrightarrow & e_1(b^2-a^2) = b^2-a^2\\
+      \Leftrightarrow & e_1 = 1
+    \end{align*}
+    #+END_SRC    
+    Dann ist \(e_2 = \frac{(1-1)a}{b} = 0\)
+    Also: \(e = (1,0)\) 
+*** Existenz der Inversen
+    zz.: Zu jedem \((a,b)\in K \) gibt es ein \((x,y)\in K\) mit \((a,b)(x,y) = e\).
+    #+BEGIN_SRC latex
+\begin{align*}
+&  (a,b)(x,y) = (1,0)\\
+  \Leftrightarrow & ax-by = 1 \land ay+bx = 0\\
+  \Leftrightarrow  & x = \frac{1+by}{a} \land ay+bx = 0\\
+  \Rightarrow & ay + b(\frac{1+by}{a}) = 0\\
+  \Leftrightarrow & a^2y = -b-b^2y\\
+  \Leftrightarrow & y(a^2+b^2) = -b\\
+  \Leftrightarrow & y = \frac{-b}{a^2+b^2}\\
+  \Rightarrow & x = \frac{1+b(\frac{-b}{a^2+b^2})}{a}\\
+  \Leftrightarrow & \frac{a^2+b^2-b}{a^3+b^2a}
+\end{align*}
+
+    #+END_SRC
+    Also \((a,b)^{-1} = (\frac{1+by}{a}, \frac{a^2+b^2-b}{a^3+b^2a})\)
+    (Sieht komisch aus)
+   
+* Aufgabe 4
