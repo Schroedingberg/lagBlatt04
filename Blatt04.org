@@ -122,11 +122,12 @@ Geht so nur wenn G abelsch. Alternative:
 ** b) Finden Sie zwei verschiedene Unterräume \(W_1,W_2 \leq \mathbb{R}^2  \) mit \(U \oplus W_1 = \mathbb{R}^2 = U \oplus W_2   \)
    Es gilt \(\mathbb{R}^2 = W_1 \oplus U \) gdw. \(\mathbb{R}^2 = W_1 + U \land U \cap W_1 = \{0\}\).
    - Vermutung :: So wie ich das interpretiere, ist die zweite
-                  Bedingung leicht zu erfüllen. Ich denke mann muss
+                  Bedingung leicht zu erfüllen. Ich denke man muss
                   nur sozusagen eine Gerade konstruieren, die \(3x+7y
                   = 0\) im Punkt (0,0) schneidet, also z.B. x-y = 0.
                   Die Herausforderung ist jetzt (wahrscheinlich
                   Intention des Dozenten), die so zu wählen, dass die
                   Unterräume eben \(\mathbb{R}^2\) bilden.
+
 		  
    
