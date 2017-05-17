@@ -11,7 +11,7 @@ Beweis:
  - IV :: \(g^{m}g^{n}=g^{m+n}\) gelte für feste \(m,n \in \mathbb{Z}\)
  - IS :: zz.:\(g^{m+1}g^{n+1}=g^{m+1+n+1}    \)
    - Beweis:
-     #+BEGIN_SRC latex
+     #+BEGIN_SRC latex :export results
 \begin{align*}
   g^{m+1}g^{n+1} = g^m g^n gg= g^{m+n}gg = g^{m+n+2} = g^{m+1+n+1} 
 \end{align*}
@@ -65,7 +65,7 @@ Geht so nur wenn G abelsch. Alternative:
 *** TODO Assoziativgesetz
 *** Existenz des neutralen Elements \(e = (e_1,e_2)\)
     
-    #+BEGIN_SRC latex
+    #+BEGIN_SRC latex :export results
     \begin{align*}
 	&(a,b)(e_1,e_2) = (a,b)\\
       \Leftrightarrow & (ae_1-be_2, ae_2+be_1) =(a,b)\\
@@ -82,7 +82,7 @@ Geht so nur wenn G abelsch. Alternative:
     Also: \(e = (1,0)\) 
 *** Existenz der Inversen
     zz.: Zu jedem \((a,b)\in K \) gibt es ein \((x,y)\in K\) mit \((a,b)(x,y) = e\).
-    #+BEGIN_SRC latex
+    #+BEGIN_SRC latex :export results
 \begin{align*}
 &  (a,b)(x,y) = (1,0)\\
   \Leftrightarrow & ax-by = 1 \land ay+bx = 0\\
