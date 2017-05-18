@@ -125,4 +125,37 @@ Analog wird für \(m,n < 0\) verfahren.
                   Intention des Dozenten), die so zu wählen, dass die
                   Unterräume eben \(\mathbb{R}^2\) bilden.
 * Aufgabe 5
-
+** \(U_1 = \left\{f \in Abb(\mathbb{N},\mathbb{Q} )| f(n) = f(n+2) \forall n\in \mathbb{N} \right\}\)
+   \(U_1\) ist kein Unterraum von \(Abb( \mathbb{N},\mathbb{Q})\), da
+   \(f(n) = f(n+2)\) keine Abbildung ist (einem Element aus \mathbb{N}
+   wird mehr als ein Element aus \mathbb{Q} zugeordnet ) und so
+   \(U_1 = \emptyset\) .
+** \(U_2 = \left\{f \in Abb(\mathbb{N},\mathbb{Q} )| f(n) \neq  f(n+2) \forall n\in \mathbb{N} \right\}\)
+   Da \(U_2 = \bar{U_1}\) ist nach analoger (s. \(U_1\)) Argumentation \(U_2\) ein
+   Unterraum von \(Abb( \mathbb{N},\mathbb{Q})\).
+** \(U_3 = \left\{f \in Abb(\mathbb{N},\mathbb{Q} )| f(n) \leq f(n+1) \forall n\in \mathbb{N} \right\}\)
+   1) \(U_3 \neq \emptyset\)
+      Es gibt Abbildungen, für die \(f(n) \leq f(n+1) \forall n\in
+      \mathbb{N}\) gilt (wachsende Funktionen).
+   2) \(f_1+f_2 \in U_3 \forall f_1,f_2 \in U_3     \)
+     Wenn \(f(n) \leq f(n+1) \forall n\in
+     \mathbb{N}\) für zwei Abbildungen \(f_1, f_2\) gilt, dann ist
+     auch \(f_1 + f_2\) wachsend und damit in \(U_3\).
+   3) \(k\cdot f \in U_3 \forall k \in \mathbb{N}, f \in U_3\)
+      Analog zu 2.
+      (Bemerke: Mit natürlichen Zahlen lassen sich auch keine
+      Steigungen umdrehen)
+** \(U_4  = \left\{ f \in Abb(\mathbb{N},\mathbb{Q})| f(n) = 0 \text{ für unendlich viele n }\in\mathbb{N} \right\}\)
+   
+** \(U_5  = \left\{ f \in Abb(\mathbb{N},\mathbb{Q})| f(n) = 0 \text{ für fast alle n }\in\mathbb{N} \right\}\)
+   "Für fast alle" bedeutet "für alle bis auf endlich viele". In
+   diesem Zusammenhang bedeutet das, dass in \(U_5\) alle Funktionen
+   enthalten sind, die fast alle natürlichen Zahlen auf 0 abbilden.
+   Man kann diese Abbildungen also interpretieren als die Abbildungen,
+   die die ersten n natürlichen Zahlen auf 0 abbilden und die
+   restlichen auf andere rationale Zahlen.
+   Diese kann man aber beliebig addieren und multiplizieren, ohne dass
+   das Ergebnis eine Funktion sein kann, die fast keine n mehr auf 0
+   abbildet oder alle auf 0 abbildet, da \(\mathbb{N}\) abzählbar
+   unendlich ist. Also ist \(U_5 \) ein Unterraum von \(Abb(\mathbb{N}, \mathbb{Q})\).
+   
