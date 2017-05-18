@@ -99,7 +99,7 @@ Analog wird für \(m,n < 0\) verfahren.
   \( U = {(x,y) \in \mathbb{R}} | 3x+7y = 0\) Unterraum von \(\mathbb{R}^2\).
 ** a) 
 
-#+BEGIN_SRC latex
+#+BEGIN_SRC latex :export none
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
 \draw[->,color=black] (-4.3,0.) -- (16.84,0.);
 \foreach \x in {-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.,7.,8.,9.,10.,11.}
@@ -145,7 +145,7 @@ Analog wird für \(m,n < 0\) verfahren.
       Analog zu 2.
       (Bemerke: Mit natürlichen Zahlen lassen sich auch keine
       Steigungen umdrehen)
-** \(U_4  = \left\{ f \in Abb(\mathbb{N},\mathbb{Q})| f(n) = 0 \text{ für unendlich viele n }\in\mathbb{N} \right\}\)
+** TODO \(U_4  = \left\{ f \in Abb(\mathbb{N},\mathbb{Q})| f(n) = 0 \text{ für unendlich viele n }\in\mathbb{N} \right\}\)
    
 ** \(U_5  = \left\{ f \in Abb(\mathbb{N},\mathbb{Q})| f(n) = 0 \text{ für fast alle n }\in\mathbb{N} \right\}\)
    "Für fast alle" bedeutet "für alle bis auf endlich viele". In
