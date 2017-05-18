@@ -14,14 +14,10 @@ Beweis:
    - Beweis:
      #+BEGIN_SRC latex :export results
 \begin{align*}
-  g^{m+1}g^{n+1} = g^m g^n gg= g^{m+n}gg = g^{m+n+2} = g^{m+1+n+1} 
-\end{align*}
-Geht so nur wenn G abelsch. Alternative:
-\begin{align*}
   g^{m+1}g^{n+1}=g^mgg^ng=g^mg^{n+1}g=g^mg^ng^2=g^{m+n}g^2=g^{m+n+2}=g^{m+1+n+1}
 \end{align*}
      #+END_SRC
-
+Analog wird für \(m,n < 0\) verfahren.
 * Aufgabe 2
   Sei \(G\) eine Gruppe mit neutralem Element \(e\)
 ** a) zz: \(g,h \in G: g\sim h \Leftrightarrow g = h \lor g = h^{-1}  \)  , \(\sim\) Äquivalenzrelation
@@ -128,6 +124,5 @@ Geht so nur wenn G abelsch. Alternative:
                   Die Herausforderung ist jetzt (wahrscheinlich
                   Intention des Dozenten), die so zu wählen, dass die
                   Unterräume eben \(\mathbb{R}^2\) bilden.
+* Aufgabe 5
 
-		  
-   
